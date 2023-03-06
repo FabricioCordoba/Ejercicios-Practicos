@@ -1,0 +1,63 @@
+[
+{
+    "modelo": "Ka",
+    "marca": "Ford",
+    "anio": 2000,
+    "color": "Negro",
+    "tipo": "Sedan",
+    "kilometraje": 200523 
+},
+
+{
+    "modelo": "Clio", 
+    "marca": "Renault",
+    "anio": 2009,
+    "colo": "Azul",
+    "tipo": "Sedan",
+    "kilometraje": 104997
+},
+
+{
+    "modelo": "S10",
+    "marca": "Chevrolet",
+    "anio": 2007,
+    "color": "Negro",
+    "tipo": "Pick-up",
+    "kilometraje": 197858
+},
+
+{
+    "modelo": "UNO-SRC",
+    "marca": "FIat,", 
+    "anio": 1991,
+    "color": "Rojo",
+    "tipo": "Sedan",
+    "kilometraje": 85654
+},
+
+{
+    "modelo": "Maverik",
+    "marca": "Ford", 
+    "anio": 2022,
+    "color": "Blanca",
+    "tipo": "Pick-up",
+    "kilometraje": 10582
+},
+{
+    "modelo": "2008",
+    "marca": "Peugeot",
+    "anio": 2010,
+    "color": "Bordo",
+    "tipo": "Sedan",
+    "kilometraje": 50145
+},
+   
+{
+    "modelo": "C3",
+    "marca": "Citroen",
+    "anio": 2011,
+    "color": "Gris",
+    "tipo": "Sedan",
+    "kilometraje": 103547 
+}
+]
