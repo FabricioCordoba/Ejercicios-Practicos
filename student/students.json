@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Julian",
+        "lastName": "Marquez",
+        "note": 6
+    },
+    {
+        "name": "Micaela",
+        "lastName": "Gomez",
+        "note": 9
+    },
+    {
+        "name": "Jose",
+        "lastName": "Gonzalez",
+        "note": 4
+    },
+    {
+        "name": "Maria",
+        "lastName":"Fernandez",
+        "note": 9
+    },
+    {
+        "name": "Martin",
+        "lastName": "Quiroga",
+        "note": 5
+    },
+    {
+        "name": "Monica",
+        "lastName": "Goñi",
+        "note": 6
+    }
+    
+
+
+]
