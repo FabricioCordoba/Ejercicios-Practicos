@@ -63,8 +63,8 @@ let vendedor = new RegistroAuto();
 
 //vendedor.consultar() //CONSULTA LISTADO DE AUTOS
 //vendedor.consultarAuto("Clio", listaVehiculos); //CONSULTA POR UN AUTO ESPECIFICO
-//vendedor.darAlta(corolla, listaVehiculos); // agrega un nuevo auto
-//vendedor.darAlta(suran, listaVehiculos); // agrega un nuevo auto
+vendedor.darAlta(corolla, listaVehiculos); // agrega un nuevo auto
+vendedor.darAlta(suran, listaVehiculos); // agrega un nuevo auto
 //vendedor.darBaja("S10", listaVehiculos); //Elimina un vehiculo y devuelve el listado modificado
 //console.log(listaVehiculos);
 
