@@ -1,0 +1,9 @@
+table, th, td{
+    border: black solid 1px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+    align-items: center;
+}

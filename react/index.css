@@ -1,0 +1,25 @@
+h1{
+   background-color: aqua;
+   text-align: center;
+   font-style: italic;
+   color: coral;
+    
+}
+#cards-container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card{
+    background-color: burlywood;
+    width: 400px;
+    border-color: black solid 1px;
+    border-radius: 10px;
+   padding: 5px 5px;
+   text-align: center;
+   margin: 10px 10px;
+}
+#card-tenplate{
+    border: green solid 1px;
+}

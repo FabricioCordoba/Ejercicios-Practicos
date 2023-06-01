@@ -32,6 +32,7 @@ export default class SchoolManager {
   }
 
   hireTeacher() {
+    //fs.writeFileSync("teachers.json", "[]", "utf-8")
     let name = readLineSync
       .question("Escriba el nombre del docente:--> ")
       .toLowerCase();
@@ -40,8 +41,13 @@ export default class SchoolManager {
       .toLowerCase();
     let newTeacher = new Teacher(name, lastName);
 
-    let teachers = [...this.dataTeacher(), newTeacher];
-    fs.writeFileSync("./teachers.json", JSON.stringify(teachers, null, 2));
+
+    let teachers: any = [...this.dataTeacher(), newTeacher];
+
+    
+    
+    let constantes= Buffer.alloc( Buffer . byteLength ( teachers , 'utf8' ), teachers , 'utf8' ); 
+   fs.writeFileSync("./teachers.json", "[]", "utf-8");
     console.log(this.dataTeacher());
   }
 

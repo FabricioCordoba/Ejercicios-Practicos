@@ -1,35 +1,17 @@
 [
-    {
-        "name": "Julian",
-        "lastName": "Marquez",
-        "note": 6
-    },
-    {
-        "name": "Micaela",
-        "lastName": "Gomez",
-        "note": 9
-    },
-    {
-        "name": "Jose",
-        "lastName": "Gonzalez",
-        "note": 4
-    },
-    {
-        "name": "Maria",
-        "lastName":"Fernandez",
-        "note": 9
-    },
-    {
-        "name": "Martin",
-        "lastName": "Quiroga",
-        "note": 5
-    },
-    {
-        "name": "Monica",
-        "lastName": "Goñi",
-        "note": 6
-    }
-    
-
-
+  {
+    "name": "milagros",
+    "lastName": "herrera",
+    "note": 8
+  },
+  {
+    "name": "ana",
+    "lastName": "assann",
+    "note": 5
+  },
+  {
+    "name": "santiago",
+    "lastName": "garda",
+    "note": 7
+  }
 ]

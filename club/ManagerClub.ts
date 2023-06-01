@@ -5,7 +5,9 @@ import { Player, Sport} from "./Player";
 
 
 export class ManagerClub{
-    
+    constructor(){
+        fs.writeFileSync('./socios.json', "[]")
+    }
     
     data() { return JSON.parse(fs.readFileSync("./member.json", "utf-8"))}
 

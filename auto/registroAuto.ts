@@ -1,53 +1,40 @@
 import { Auto } from "./auto";
+import fs from "fs";
 
-const fs = require("fs");
+export default class RegistroAuto {
 
-let listaVehiculos: any[] = [];
+  data() { return JSON.parse(fs.readFileSync("./listadoAuto.json", "utf-8"))}
 
-const data = fs.readFileSync("./listadoAuto.json", "utf8");
-    const vehiculos = JSON.parse(data);
-    for (let i = 0; i < vehiculos.length; i++) {
-      listaVehiculos.push(vehiculos[i]);
-    }
-
-export class RegistroAuto {
-  //consultar listado.
-
-  consultar() {
-    console.log(listaVehiculos)
+   consultarListadoAutos() {
+    console.log(this.data())
   }
 
-  darAlta(auto: Auto, array: Auto[]) {
-    //NO TOCAR--AGREGA NUEVO AUTO AL LISTADO
-    if (array.push(auto)) {
-      console.log("Se incorporo vehiculo ", auto, " para la venta");
-      this.consultar(); //opcional
+  darAlta(auto: Auto,) {
+    
+    let car = [...this.data(), auto];
+    fs.writeFileSync("./listadoAuto.json", JSON.stringify(car, null, 2));  
+    console.log(this.data());
       
-    } else {
-      console.log("el auto ", auto, " no se pudo incorporar");
-    }
   }
 
-  darBaja(nombre: string, array: Auto[]): any {
-    let autoBaja = array.findIndex((auto) => auto.modelo === nombre);
+  darBaja(modelo: string) {
+    let listado= this.data(); 
+    let autoBaja = listado.findIndex((listado:{modelo:string}) => listado.modelo === modelo);      
 
-    if (autoBaja >= 0) {
-      array.splice(autoBaja, 1);
-      console.log("El vehiculo ", nombre, "se dio de baja");
-      console.log(array);
-
-      return array;
+   if (autoBaja >= 0) {
+      listado.splice(autoBaja, 1);
+      console.log("El vehiculo ", modelo, "se dio de baja");
+      fs.writeFileSync("./listadoAuto.json", JSON.stringify(listado));
+      console.log(this.data());    
     } else {
       console.log(
-        "El vehiculo ",
-        nombre,
-        " no pudo darse de baja porque no se encontro"
+        "El vehiculo ",modelo ," no pudo darse de baja porque no se encontro"
       );
     }
   }
 
-  consultarAuto(modelo: string, array: Auto[]) {//FUNCIONA
-    let autoEncontrado = array.find((auto) => auto.modelo === modelo);
+  consultarAuto(modelo: string) {
+    let autoEncontrado = this.data().find((auto:{modelo:string}) => auto.modelo === modelo);
       if (autoEncontrado) {
       console.log(modelo, " Esta disponible ", autoEncontrado);
       return autoEncontrado;
@@ -56,15 +43,3 @@ export class RegistroAuto {
     }
   }
 }
-
-let suran = new Auto("Suran", "Renault", 2016, "Rojo", "Sedan", 59004);
-let corolla= new Auto("Corolla", "Toyota", 2011, "Gris", "Sedan", 202456);
-let vendedor = new RegistroAuto();
-
-//vendedor.consultar() //CONSULTA LISTADO DE AUTOS
-//vendedor.consultarAuto("Clio", listaVehiculos); //CONSULTA POR UN AUTO ESPECIFICO
-vendedor.darAlta(corolla, listaVehiculos); // agrega un nuevo auto
-vendedor.darAlta(suran, listaVehiculos); // agrega un nuevo auto
-//vendedor.darBaja("S10", listaVehiculos); //Elimina un vehiculo y devuelve el listado modificado
-//console.log(listaVehiculos);
-

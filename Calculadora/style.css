@@ -1,0 +1,31 @@
+.general{
+    border: black solid 1px;
+    width: 350px;
+   align-items: center;
+}
+p{
+    border: black solid 1px;
+
+}
+.button{
+    
+    display: flex;
+    justify-content: space;
+    
+} 
+button{
+    width: 30%;
+}
+#igual{
+width: 100%;
+}
+
+#display{
+    width: 98%;
+    height: 50px;
+    background-color: aqua;
+    text-align: right;
+    font-size: x-large;
+    font-style: oblique;
+
+}
